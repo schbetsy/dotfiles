@@ -1,0 +1,13 @@
+alias pgup='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias gst='git status'
+alias gap='git add -p'
+alias la='ls -a'
+alias unpair='pair -u'
+alias c="clear"
+alias cr="clear;rake"
+alias la="ls -la"
+alias sl="unicornleap -n 2"
+alias cljs="rlwrap ~/code/clojurescript/script/repljs"
+alias clj="rlwrap ~/code/clojurescript/script/repl"
+alias v="vim"
+alias g="git"
