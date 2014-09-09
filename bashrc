@@ -11,7 +11,7 @@ HISTSIZE=10000
 HISTCONTROL=erasedups
 
 # get aliases
-source $HOME/.bash_aliases
+source $HOME/dev/dotfiles/aliases
 
 # Append to history file
 shopt -s histappend
