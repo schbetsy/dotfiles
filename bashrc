@@ -33,7 +33,17 @@ RUBYOPT=rubygems
 
 # Command prompt setup
 GIT_PS1_SHOWDIRTYSTATE=1
-PS1=export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+# \[\033[01;30m\] = gray
+# \[\033[01;31m\] = salmon
+# \[\033[01;32m\] = green
+# \[\033[01;33m\] = yellow
+# \[\033[01;34m\] = violet
+# \[\033[01;35m\] = pink
+# \[\033[01;36m\] = cyan
+# \[\033[01;37m\] = white
+# \[\033[00m\] = default
+source ~/dev/dotfiles/command_prompt
+export PS1='\[\033[01;34m\]$(_hostname_if_remote) \[\033[01;32m\]\w\[\033[01;33m\]$(__git_ps1) \[\033[01;34m\]$(_vc_remote_status_or_blank)$(_count_jobs_or_blank) \$\[\033[00m\] '
 
 export VISUAL EDITOR LESS RI PSQL_EDITOR CLICOLOR LSCOLORS PGOPTIONS LC_CTYPE DISPLAY GEMDOC RSPEC AUTOFEATURE RUBYOPT HISTSIZE HISTCONTROL GIT_PS1_SHOWDIRTYSTATE PS1
 
