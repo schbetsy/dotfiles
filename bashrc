@@ -43,7 +43,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 # \[\033[01;37m\] = white
 # \[\033[00m\] = default
 source ~/dev/dotfiles/command_prompt
-export PS1='\[\033[01;34m\]$(_hostname_if_remote) \[\033[01;32m\]\w\[\033[01;33m\]$(__git_ps1) \[\033[01;34m\]$(_vc_remote_status_or_blank)$(_count_jobs_or_blank) \$\[\033[00m\] '
+export PS1='\[\033[01;34m\]$(_hostname_if_remote) \[\033[01;32m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]$(_vc_remote_status_or_blank)\[\033[01;31m\]$(_count_jobs_or_blank) \[\033[01;33m\]\$\[\033[00m\] '
 
 export VISUAL EDITOR LESS RI PSQL_EDITOR CLICOLOR LSCOLORS PGOPTIONS LC_CTYPE DISPLAY GEMDOC RSPEC AUTOFEATURE RUBYOPT HISTSIZE HISTCONTROL GIT_PS1_SHOWDIRTYSTATE PS1
 
