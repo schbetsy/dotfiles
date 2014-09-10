@@ -2,7 +2,7 @@
 
 # the \j option in $PS1 shows 0 when there are no jobs
 function _count_jobs_or_blank() {
-  count="$(jobs | grep \[[:digit:]\] | wc -l)"
+  count="$(jobs | grep \[[:digit:]\] | wc -l | tr -d ' ')"
 
   if [ $count != '0' ]; then
     echo " $count"
