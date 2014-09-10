@@ -5,34 +5,33 @@ export PATH=/usr/local/sbin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Store 10,000 history entries
-HISTSIZE=10000
-# Don't store duplicates
-HISTCONTROL=erasedups
-
 # get aliases
 source $HOME/dev/dotfiles/aliases
 
 # Append to history file
 shopt -s histappend
 
-CLICOLOR=1
-DISPLAY=:0.0
-VISUAL=/usr/bin/vim
-EDITOR="$VISUAL"
-GEMDOC=$(\gem environment gemdir)/doc
-LC_CTYPE=en_US.UTF-8
-LESS="FRX"
-LSCOLORS=cxgxcxdxbxegedabagacad
-PGOPTIONS='-c client_min_messages=WARNING'
-PSQL_EDITOR='vim -c"set syntax=sql"'
-RI="--format ansi --width 80"
-RSPEC=true
-AUTOFEATURE=true
-RUBYOPT=rubygems
+export CLICOLOR=1
+export DISPLAY=:0.0
+export VISUAL=/usr/bin/vim
+export HISTSIZE=10000 # Store 10,000 history entries
+export HISTCONTROL=ignoredups # don't add duplicate entries to command history
+export EDITOR=vim
+export GEMDOC=$(\gem environment gemdir)/doc
+export LC_CTYPE=en_US.UTF-8
+export LESS="FRX"
+export LSCOLORS=cxgxcxdxbxegedabagacad
+export PGOPTIONS='-c client_min_messages=WARNING'
+export PSQL_EDITOR='vim -c"set syntax=sql"'
+export RI="--format ansi --width 80"
+export RSPEC=true
+export AUTOFEATURE=true
+export RUBYOPT=rubygems
 
 # Command prompt setup
-GIT_PS1_SHOWDIRTYSTATE=1
+source ~/dev/dotfiles/command_prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\[\033[01;34m\]$(_hostname_if_remote) \[\033[01;32m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]$(_vc_remote_status_or_blank)\[\033[01;31m\]$(_count_jobs_or_blank) \[\033[01;33m\]\$\[\033[00m\] '
 # \[\033[01;30m\] = gray
 # \[\033[01;31m\] = salmon
 # \[\033[01;32m\] = green
@@ -42,10 +41,6 @@ GIT_PS1_SHOWDIRTYSTATE=1
 # \[\033[01;36m\] = cyan
 # \[\033[01;37m\] = white
 # \[\033[00m\] = default
-source ~/dev/dotfiles/command_prompt
-export PS1='\[\033[01;34m\]$(_hostname_if_remote) \[\033[01;32m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]$(_vc_remote_status_or_blank)\[\033[01;31m\]$(_count_jobs_or_blank) \[\033[01;33m\]\$\[\033[00m\] '
-
-export VISUAL EDITOR LESS RI PSQL_EDITOR CLICOLOR LSCOLORS PGOPTIONS LC_CTYPE DISPLAY GEMDOC RSPEC AUTOFEATURE RUBYOPT HISTSIZE HISTCONTROL GIT_PS1_SHOWDIRTYSTATE PS1
 
 ## Auto-completion
 sources=(`brew --prefix`/etc/bash_completion
