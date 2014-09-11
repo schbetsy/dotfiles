@@ -1,7 +1,7 @@
 export PATH=$HOME/.rvm/bin:$PATH # Add RVM at front of PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH/usr/local/bin
+export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
 ### Added by the Heroku Toolbelt
 export PATH=$PATH:"/usr/local/heroku/bin"
