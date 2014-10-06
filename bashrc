@@ -26,7 +26,6 @@ export PSQL_EDITOR='vim -c"set syntax=sql"'
 export RI="--format ansi --width 80"
 export RSPEC=true
 export AUTOFEATURE=true
-export RUBYOPT=rubygems
 
 # Command prompt setup
 source ~/dev/dotfiles/command_prompt
