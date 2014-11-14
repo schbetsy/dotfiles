@@ -27,7 +27,7 @@ function _vc_branch_name_or_blank() {
 
 function _vc_remote_status_or_blank() {
   if [ -d '.git' ]; then
-    remote_status="$(git status | sed 2p | grep --only-matching --extended-regexp "diverged|ahead|behind")"
+    remote_status="$(git status | grep --only-matching --extended-regexp "diverged|ahead|behind")"
 
     if [ -z "$remote_status" ]; then
       # test if the branch is local-only (thanks http://stackoverflow.com/a/12609622 and http://stackoverflow.com/a/2342841)
