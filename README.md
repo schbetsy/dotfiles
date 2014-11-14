@@ -1,5 +1,9 @@
-Eventually, this repo will contain configuraiton files for my bash, git, vim, and other tools. I'm currently learning how it all works, so I'm starting with the bare minimum and borrowed code from other developers. I've tried to include attributions where appropriate. Advice and suggestions are welcome.
+This are my slowly-evolving dotfiles. I'm starting the journey of understanding and customizing my configuration. This repo will reflect the shift from canned and borrowed configuration files to something of my own. The bashrc was originally borrowed heavily from my boss (@bendycode), with bash prompt configuration from @losingkeys. vimrc forked from @begriffs.
 
+Advice, suggestions, and pull requests are welcome. 
+
+Installation
+------------
 Currently, I'm using these by sourcing them from the corresponding dotfiles in my home path.
 For instance, in `~/.bashrc`, I have this line (and nothing else):
 ```
@@ -13,4 +17,6 @@ source <path to local copy of vimrc in this repo>
 
 I'm open to suggestions for better ways to handle these links, too.
 
+License
+-------
 See license info in LICENSE.txt
