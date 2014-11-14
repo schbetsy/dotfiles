@@ -1,7 +1,6 @@
 alias pgup='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias gst='git status'
 alias gap='git add -p'
-alias la='ls -a'
 alias unpair='pair -u'
 alias c="clear"
 alias cr="clear;rake"
