@@ -1,9 +1,10 @@
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$HOME/.rvm/bin:$PATH # Add RVM at front of PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export PATH=$PATH:$HOME/bin
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/sbin
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=$PATH:"/usr/local/heroku/bin"
 
 # get aliases
 source $HOME/dev/dotfiles/aliases
@@ -17,7 +18,7 @@ export VISUAL=/usr/bin/vim
 export HISTSIZE=10000 # Store 10,000 history entries
 export HISTCONTROL=ignoredups # don't add duplicate entries to command history
 export EDITOR=vim
-export GEMDOC=$(\gem environment gemdir)/doc
+#export GEMDOC=$(\gem environment gemdir)/doc
 export LC_CTYPE=en_US.UTF-8
 export LESS="FRX"
 export LSCOLORS=cxgxcxdxbxegedabagacad
