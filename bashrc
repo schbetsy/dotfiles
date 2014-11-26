@@ -51,6 +51,9 @@ for src in ${sources[@]}; do
   [ -f $src ] && . $src
 done
 
+# Add git completion to aliases
+__git_complete g __git_main
+
 # Use VI mode in bash
 set -o vi
 
